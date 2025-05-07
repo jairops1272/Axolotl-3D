@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajolotito 3D</title>
+    
+    <!-- Enlazamos el archivo CSS externo -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="score">Puntos: 0</div>
+
+    <!-- Instrucciones flotantes (no interferirán con el juego) -->
+    <div id="instructions">
+        <h2>Instrucciones:</h2>
+        <ul>
+            <li><strong>W</strong> o <strong>↑</strong> avanzar</li>
+            <li><strong>S</strong> o <strong>↓</strong> retroceder</li>
+            <li><strong>A</strong> o <strong>←</strong> mover a la izquierda</li>
+            <li><strong>D</strong> o <strong>→</strong> mover a la derecha</li>
+            <li><strong>Espacio</strong> para subir</li>
+            <li><strong>Shift</strong> para bajar</li>
+            <li>Clic izquierdo para lanzar los restos en bola</li>
+        </ul>
+    </div>
+    <div id="controls-panel">
+        <h3>Configuración</h3>
+        <label>
+            <input type="checkbox" id="light-control" checked> Control de iluminación
+        </label>
+        <label>
+            <input type="checkbox" id="fog-control"> Control de niebla
+        </label>
+    </div>
+    <!-- Three.js y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+
+    <!-- Carga de scripts -->
+    <script type="module">
+        window.TWEEN = TWEEN;
+        import './js/main.js';
+    </script>
+</body>
+</html>

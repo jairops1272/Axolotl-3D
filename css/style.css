@@ -1,0 +1,97 @@
+/* Asegúrate de que el cuerpo y el canvas ocupen toda la pantalla */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Asegura que no haya barras de desplazamiento */
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+canvas {
+    display: block; /* Asegura que el canvas ocupe el 100% de la pantalla */
+}
+
+/* Estilo para el score */
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0ff;
+    z-index: 10;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* Estilo para las instrucciones flotantes en la esquina superior derecha */
+#instructions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    z-index: 10;
+    max-width: 300px; /* Limita el tamaño de las instrucciones */
+    overflow-y: auto; /* Permite hacer scroll si las instrucciones son muy largas */
+}
+
+#instructions h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+#instructions ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#instructions li {
+    margin-bottom: 8px;
+}
+
+/* Estilo para los elementos dentro de la lista */
+#instructions strong {
+    color: #0ff;
+}
+/* Añade esto al final de tu archivo CSS */
+#controls-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+#controls-panel h3 {
+    margin-bottom: 10px;
+    color: #0ff;
+}
+
+#controls-panel label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+#controls-panel input[type="checkbox"] {
+    margin-right: 8px;
+}
